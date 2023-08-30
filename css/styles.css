@@ -72,35 +72,26 @@ body {
 /* PHONE SCREEN */
 
 .container {
-  /* min-width: 320px; */
-  /* max-width: 428px; */
-  max-width: 1158px;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-left: auto;
-  margin-right: auto;
+  min-width: 320px;
+  max-width: 428px;
+  margin: 0 auto;
+  padding: 0 16px;
+
   border: 1px solid red;
 }
 
-/* @media screen and (min-width: 428px;) {
+@media screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 }
 
-@media screen and (min-width: 768px;) {
+@media screen and (min-width: 1158px) {
   .container {
-    max-width: 736px;
+    max-width: 1158px;
+    padding: 0 15px;
   }
 }
-
-@media screen and (min-width: 1158px;) {
-  .container {
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-} */
 
 /* HEADER */
 
@@ -529,35 +520,30 @@ header .container {
 
 .customers-list-logos {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  gap: 24px;
+  column-gap: 16px;
+  row-gap: 72px;
 }
 
 .customers-logos {
   display: flex;
-  flex-basis: calc((100% - 120px) / 6);
+  flex-basis: calc((100% - 24px) / 2);
   height: 88px;
   border-radius: 4px;
-  column-gap: 16px;
-  row-gap: 72px;
-  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1158px) {
+@media screen and (min-width: 768px) {
   .customers-logos {
     flex-basis: calc((100% - 48px) / 3);
-    justify-content: center;
-    /* max-width: 552px; */
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1158px) {
   .customers-logos {
-    flex-basis: calc((100% - 24px) / 2);
-    justify-content: center;
+    flex-basis: calc((100% - 120px) / 6);
   }
 }
-
 /* PORTFOLIO PAGE */
 
 .other {
