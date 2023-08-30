@@ -545,7 +545,7 @@ header .container {
 
 @media screen and (max-width: 1158px) {
   .customers-logos {
-    flex-basis: calc((100% / 3) - (16px * 2));
+    flex-basis: calc((100% - 48px) / 3);
     justify-content: center;
     /* max-width: 552px; */
   }
@@ -553,7 +553,7 @@ header .container {
 
 @media screen and (max-width: 768px) {
   .customers-logos {
-    flex-basis: calc((100% / 2) - 16px);
+    flex-basis: calc((100% - 24px) / 2);
     justify-content: center;
   }
 }
