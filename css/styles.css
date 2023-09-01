@@ -14,6 +14,8 @@
 }
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 h1,
@@ -980,12 +982,25 @@ input[type="checkbox"]:checked ~ * .agreement-checkbox-icon {
 
 /* FOOTER */
 
+
+
+.footer-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
+  .footer-wrapper{
+    align-items: start;
+  }
 }
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 96px 0;;
 }
 
 .footer-text {
@@ -1001,7 +1016,6 @@ input[type="checkbox"]:checked ~ * .agreement-checkbox-icon {
   letter-spacing: 0.02em;
   color: var(--background-color);
   margin-bottom: 16px;
-  text-align: center;
 }
 
 .footer-logo {
@@ -1036,10 +1050,31 @@ input[type="checkbox"]:checked ~ * .agreement-checkbox-icon {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-all {
-  /* align-items: baseline; */
+  
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* row-gap: 72px; */
+}
+
+@media screen and (min-width: 768px) {
+  .footer-all {
+    max-width: 552px;
+    flex-direction: row;
+    column-gap: 24px;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-all {
+    padding: 0 16px;
+    max-width: 1158px;
+    display: block;
+
+  }
+  }
 }
 
 .footer-button {
@@ -1102,16 +1137,31 @@ input[type="checkbox"]:checked ~ * .agreement-checkbox-icon {
 
 .footer-logo-container {
   display: flex;
+  padding-bottom: 72px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-right: 120px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-logo-container{
+    align-items:start;
+  } 
+  }
+
+@media screen and (min-width: 1158px) {
+  .footer-logo-container {
+    margin-right: 120px;
+    align-items: start;
+  }
+  
 }
 
 .footer-form {
   display: flex;
   gap: 24px;
-  flex-direction: column;
+  /* flex-direction: column; */
+  align-items: center;
 }
 
 .footer-form-input::placeholder {
@@ -1141,8 +1191,25 @@ input[type="checkbox"]:checked ~ * .agreement-checkbox-icon {
 }
 
 .footer-social-media {
-  width: 208px;
+  /* width: 208px; */
   gap: 16px;
+  padding-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-social-media,
+  .footer-text-sm{
+    align-items: start;
+  } 
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-social-media,
+  .footer-text-sm {
+
+  }
+  
 }
 
 .footer-icons-list {
