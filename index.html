@@ -58,12 +58,16 @@
         <address class="contacts">
           <ul class="list contacts-list-container">
             <li>
-              <a class="link menu-list-item" href="mailto:info@devstudio.com"
+              <a
+                class="link menu-list-item contacts-items"
+                href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a class="link menu-list-item" href="tel:+110001111111"
+              <a
+                class="link menu-list-item contacts-items"
+                href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -174,7 +178,41 @@
           <h2 class="section-fourth-h-second">Our Team</h2>
           <ul class="list section-fourth-images">
             <li class="section-fourth-list-li">
-              <img src="./images/team1.jpg" alt="Mark Guerrero" width="264" />
+              <!-- <img src="./images/team1.jpg" alt="Mark Guerrero" width="264" /> -->
+              <picture>
+                <!-- Desktop screen  -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/team_desktop@1x-3.jpg 1x,
+                    ./images/team_desktop@2x-3.jpg 2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team_tablet@1x-3.jpg 1x,
+                    ./images/team_tablet@2x-3.jpg 2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team_mob@1x.jpg 1x,
+                    ./images/team_mob@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/team_desktop@1x-3.jpg"
+                  alt="portrait of Mark Guerrero"
+                  width="264"
+                  height="260"
+                  class="team-card-img"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card-content">
                 <h3 class="section-fourth-h-third">Mark Guerrero</h3>
                 <p class="section-fourth-p">Product Designer</p>
@@ -211,7 +249,40 @@
               </div>
             </li>
             <li class="section-fourth-list-li">
-              <img src="./images/team2.jpg" alt="Tom Ford" width="264" />
+              <picture>
+                <!-- Desktop screen  -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/team_desktop@1x-2.jpg 1x,
+                    ./images/team_desktop@2x-2.jpg 2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team_tablet@1x-2.jpg 1x,
+                    ./images/team_tablet@2x-2.jpg 2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team_mob@1x-1.jpg 1x,
+                    ./images/team_mob@2x-1.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/team_desktop@1x-2.jpg"
+                  alt="portrait of Tom Ford"
+                  width="264"
+                  height="260"
+                  class="team-card-img"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card-content">
                 <h3 class="section-fourth-h-third">Tom Ford</h3>
                 <p class="section-fourth-p">Frontend Developer</p>
@@ -248,7 +319,40 @@
               </div>
             </li>
             <li class="section-fourth-list-li">
-              <img src="./images/team3.jpg" alt="Camila Garcia" width="264" />
+              <picture>
+                <!-- Desktop screen  -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/team_desktop@1x-1.jpg 1x,
+                    ./images/team_desktop@2x-1.jpg 2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team_tablet@1x-1.jpg 1x,
+                    ./images/team_tablet@2x-1.jpg 2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team_mob@1x-2.jpg 1x,
+                    ./images/team_mob@2x-2.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/team_desktop@1x-1.jpg"
+                  alt="portrait of Camila Garcia"
+                  width="264"
+                  height="260"
+                  class="team-card-img"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card-content">
                 <h3 class="section-fourth-h-third">Camila Garcia</h3>
                 <p class="section-fourth-p">Marketing</p>
@@ -285,7 +389,40 @@
               </div>
             </li>
             <li class="section-fourth-list-li">
-              <img src="./images/team4.jpg" alt="Daniel Wilson" width="264" />
+              <picture>
+                <!-- Desktop screen  -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/team_desktop@1x.jpg 1x,
+                    ./images/team_desktop@2x.jpg 2x
+                  "
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team_tablet@1x.jpg 1x,
+                    ./images/team_tablet@2x.jpg 2x
+                  "
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team_mob@1x-3.jpg 1x,
+                    ./images/team_mob@2x-3.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/team_desktop@1x.jpg"
+                  alt="portrait of Daniel Wilson"
+                  width="264"
+                  height="260"
+                  class="team-card-img"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card-content">
                 <h3 class="section-fourth-h-third">Daniel Wilson</h3>
                 <p class="section-fourth-p">UI Designer</p>
@@ -506,7 +643,6 @@
             ></textarea>
           </div>
           <div class="form-checkbox">
-            <!-- <div class="form-input-wrapper"> -->
             <input
               class="checkbox-agree visually-hidden"
               type="checkbox"
@@ -520,7 +656,7 @@
                   <use href="./images/icons.svg#checkbox"></use>
                 </svg> </span
               >I accept the terms and conditions of the
-              <a class="privacy-link">Privacy Policy</a></label
+              <a href="" class="privacy-link">Privacy Policy</a></label
             >
             <span class="agreement-checkbox"> </span>
           </div>
@@ -548,7 +684,10 @@
 
       <ul class="mobile-menu list">
         <li class="mobile-menu-item">
-          <a href="./index.html" class="mobile-menu-link link link-accent">
+          <a
+            href="./index.html"
+            class="mobile-menu-link link link-accent current"
+          >
             Studio
           </a>
         </li>

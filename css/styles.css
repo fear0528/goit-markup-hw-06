@@ -81,8 +81,6 @@ button {
   max-width: 428px;
   margin: 0 auto;
   padding: 0 16px;
-
-  border: 1px solid red;
 }
 
 @media screen and (min-width: 768px) {
@@ -130,6 +128,10 @@ button {
   stroke: var(--dark-color);
 }
 
+.hamburger-open {
+  background-color: transparent;
+}
+
 .menu-list-item {
   position: relative;
   display: flex;
@@ -150,9 +152,18 @@ button {
   }
 }
 
-.contacts .menu-list-item {
-  font-weight: 400;
-  color: var(--text-color);
+.contacts-items {
+  font-size: 12px;
+  padding: 6px 0;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1158px) {
+  .contacts-items {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0;
+  }
 }
 
 .contacts {
@@ -174,13 +185,14 @@ button {
   border-radius: 2px;
 }
 
-.menu-list-item.current::after {
+.current::after {
   background-color: var(--pressed-state-color);
   bottom: -1px;
 }
 
 .current {
   color: var(--pressed-state-color);
+  padding: 22px 0;
 }
 
 .header-list-container,
@@ -242,17 +254,71 @@ header .container {
 /* SECTION FIRST */
 
 .section-first {
-  max-width: 1440px;
+  min-width: 320px;
+  max-width: 428px;
   margin: 0 auto;
   padding: 188px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/herobg.jpg);
+    url(../images/hero-bg_mob@1x.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (max-width: 767px) and (-webkit-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .section-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg_mob@2x.jpeg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-first {
+    max-width: 768px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg_tablet@1x.jpeg);
+  }
+}
+
+@media screen and (min-width: 768px) and (-webkit-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .section-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg_tablet@2x.jpeg);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .section-first {
+    padding: 188px 0;
+    max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg_desktop@1x.jpeg);
+  }
+}
+
+@media screen and (min-width: 1158px) and (-webkit-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .section-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg_desktop@2x.jpeg);
+  }
 }
 
 .h-main {
@@ -627,6 +693,7 @@ header .container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: space-between;
   column-gap: 16px;
   row-gap: 72px;
 }
@@ -1162,7 +1229,7 @@ input[type="checkbox"]:checked ~ * .agreement-checkbox-icon {
 .footer-form-input {
   display: flex;
   flex-direction: row;
-  width: 264px;
+  width: 100%;
   height: 40px;
   flex-shrink: 0;
   border-radius: 4px;
@@ -1175,7 +1242,21 @@ input[type="checkbox"]:checked ~ * .agreement-checkbox-icon {
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  padding-left: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form-input {
+    width: 264px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-form-input {
+  }
+}
+
+.label-footer {
+  width: 100%;
 }
 
 .footer-form-input:focus,
@@ -1231,6 +1312,7 @@ input[type="checkbox"]:checked ~ * .agreement-checkbox-icon {
 
 .footer-form {
   display: flex;
+  width: 100%;
   gap: 24px;
   flex-direction: column;
   align-items: center;
@@ -1383,9 +1465,6 @@ footer .container {
   padding: 10px;
   text-decoration: none;
 }
-.link-accent {
-  color: var(--pressed-state-color);
-}
 
 .mobile-menu-item:not(:last-child) {
   margin-bottom: 40px;
@@ -1417,6 +1496,9 @@ footer .container {
     font-size: 36px;
     font-weight: 700;
   }
+}
+.link-accent {
+  color: var(--pressed-state-color);
 }
 
 .mobile-contacts-item:last-child .mobile-contacts-link {
